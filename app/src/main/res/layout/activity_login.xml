@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/login_content"
+    tools:context="com.esp.fly.activities.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/colorMain"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_round_corner"
+            android:onClick="onLoginFacebook">
+
+            <ImageView
+                android:layout_width="@dimen/icon_login_button"
+                android:layout_height="@dimen/icon_login_button"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_facebook"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/login_with_facebook"
+                android:textColor="@color/colorMain"
+                android:textSize="@dimen/text_login_button" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_round_corner"
+            android:onClick="onLoginGoogle">
+
+            <ImageView
+                android:layout_width="@dimen/icon_login_button"
+                android:layout_height="@dimen/icon_login_button"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/login_with_google"
+                android:textColor="@color/colorMain"
+                android:textSize="@dimen/text_login_button" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.esp.fly.fragments.UserFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/user_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorMain"
+            android:scaleType="centerCrop"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/user_change_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="#54545454"
+            android:drawableLeft="@drawable/ic_photo_camera"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="Change"
+            android:textColor="@color/textWhite"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_image"
+        android:layout_above="@+id/user_save_edit"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/user_change_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:maxLines="1"
+                        android:text="Than"
+                        android:textColor="@color/colorMain"
+                        app:met_textColor="@color/colorMain"
+                        app:met_clearButton="false"
+                        app:met_errorColor="@color/red"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="Name"
+                        app:met_floatingLabelTextSize="@dimen/text_header"
+                        app:met_floatingLabelAnimating="true"
+                        app:met_floatingLabelAlwaysShown="true"
+                        app:met_floatingLabelTextColor="@color/colorMain"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkerGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/user_change_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:text="01675801065"
+                    android:textColor="@color/colorMain"
+                    app:met_clearButton="false"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelAlwaysShown="true"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelText="Phone"
+                    app:met_floatingLabelTextColor="@color/colorMain"
+                    app:met_floatingLabelTextSize="@dimen/text_header"
+                    app:met_textColor="@color/colorMain" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkerGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/user_change_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:text="Yêu màu hồng ghét sự giả dối"
+                    android:textColor="@color/colorMain"
+                    app:met_clearButton="false"
+                    app:met_textColor="@color/colorMain"
+                    app:met_errorColor="@color/red"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="Description"
+                    app:met_floatingLabelTextSize="@dimen/text_header"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelAlwaysShown="true"
+                    app:met_floatingLabelTextColor="@color/colorMain" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <Button
+        android:id="@+id/user_save_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorMain"
+        android:text="@string/save"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/save_button"
+        android:textAllCaps="false"/>
+
+
+
+</RelativeLayout>

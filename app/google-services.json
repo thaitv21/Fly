@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "421175530661",
+    "project_id": "flychat-3a0fb"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421175530661:android:15c57ad01dbc7a52",
+        "android_client_info": {
+          "package_name": "com.esp.fly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421175530661-mc7p781pkinv76u80frf0mfcop6hdlus.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "421175530661-r4etfgcu3iou8ddh64lv5478k4l8811q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esp.fly",
+            "certificate_hash": "31971288e18a77d551c28987c431879041158a5e"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6VSZdmMHhjsiuUy8y8zygAxohhD0q3fU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.esp.fly.activities.ChatActivity">
+
+    <EditText
+        android:id="@+id/receiver_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/colorMain"/>
+
+    <ListView
+        android:id="@+id/chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chat_view"
+        android:layout_below="@+id/receiver_edt"
+        android:layout_marginBottom="5dp"
+        tools:listitem="@layout/right_chat_row"
+        android:stackFromBottom="true"
+        android:divider="@color/transparent"
+        android:dividerHeight="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/chat_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:translationZ="10dp">
+
+        <EditText
+            android:id="@+id/message_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/send_button"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:text="Send"
+            android:onClick="onSendClick"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
